@@ -9,6 +9,9 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  name: {{ .name }}
   labels:
 {{- if .values }}
 {{- if .values.fullnameOverride }}

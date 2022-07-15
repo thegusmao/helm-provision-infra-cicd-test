@@ -23,10 +23,7 @@ helm upgrade --install argocd \
 ### Installing our tooling
 
 ```
-helm upgrade --install cnp \
-  --namespace cnp-ci-cd \
-  -f tooling/values.yaml \
-  .
+helm upgrade --install cnp --namespace cnp-ci-cd -f tooling/values.yaml .
 ```
 
 ### Cleanup
