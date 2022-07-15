@@ -7,7 +7,7 @@ namespace: cnp-ci-cd
 # App of applications list
 applications:
   # Nexus
-  - destination: *ci-cd
+  - destination: *ci_cd
     name: nexus
     enabled: true
     source: https://redhat-cop.github.io/helm-charts
@@ -17,7 +17,7 @@ applications:
       service:
         name: nexus
   # Sonarqube
-  - destination: *ci-cd
+  - destination: *ci_cd
     name: sonarqube
     enabled: true
     source: https://redhat-cop.github.io/helm-charts
