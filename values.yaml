@@ -1,9 +1,9 @@
 #global vars
-ci_cd_namespace: &ci_cd "cnp-ci-cd"
+ci_cd_namespace: &ci_cd "oqss-cicd"
 
 #App of applications list
 source: https://github.com/thegusmao/helm-provision-infra-cicd-test.git
-namespace: cnp-ci-cd
+namespace: *ci_cd
 # App of applications list
 applications:
   # Nexus

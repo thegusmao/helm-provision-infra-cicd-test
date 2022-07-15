@@ -15,7 +15,7 @@ helm repo add redhat-cop https://redhat-cop.github.io/helm-charts
 
 helm upgrade --install argocd \
   --create-namespace \
-  --namespace cnp-ci-cd \
+  --namespace oqss-cicd \
   -f argocd/values.yaml \
   redhat-cop/gitops-operator
 ```
@@ -23,17 +23,17 @@ helm upgrade --install argocd \
 ### Installing our tooling
 
 ```
-helm upgrade --install cnp --namespace cnp-ci-cd .
+helm upgrade --install cnp --namespace oqss-cicd .
 ```
 
 ### Cleanup
 
 ```sh
 # This may take a while:
-#helm delete uj --namespace labs-ci-cd
+helm delete cnp --namespace oqss-cicd
 
 # Then remove your ArgoCD instance
-helm delete argocd --namespace cnp-ci-cd
+helm delete argocd --namespace oqss-cicd
 ```
 
 # References
@@ -41,5 +41,3 @@ helm delete argocd --namespace cnp-ci-cd
 https://github.com/redhat-cop/helm-charts
 
 https://github.com/rht-labs/ubiquitous-journey
-
-https://gitea.com/gitea/helm-chart
