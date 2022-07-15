@@ -56,9 +56,6 @@ argocd_cr:
     - name: redhat-cop
       type: helm
       url: https://redhat-cop.github.io/helm-charts
-    - name: gitea-charts
-      type: helm
-      url: https://dl.gitea.io/charts/
 
   # configure your repo credential template (override this)
   repositoryCredentials: null
